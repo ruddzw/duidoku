@@ -1,0 +1,43 @@
+@import '_reset';
+@import '_variables';
+
+html,
+body,
+#wrapper {
+  min-width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fdfdfd;
+}
+
+// Exists to allow content to take the entire page height or more, never less
+#wrapper {
+  min-height: 100%;
+
+  // Let the child fill the wrapper
+  display: flex;
+  flex-direction: column;
+
+  .app {
+    flex: 1; // Grow to fit parent
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $linkHoverColor;
+  }
+}
